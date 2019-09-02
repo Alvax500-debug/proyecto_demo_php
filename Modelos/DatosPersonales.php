@@ -1,38 +1,28 @@
 <?php
-
+    
     require 'ConnectDB.php';
 
-    class Usuarios extends Conexion{
-        
-        //constructor y destructor
-        public function _construct(){
-            print("New User");
-        }
-        public function _destruct(){
-            print("Finish User");
-        }
-
+    class Datos_personales extends Conexion{
         //Propiedades
         private $id;
-        protected $user;
-        protected $password;
-        private $boleta;
-        protected $nombre;
-        private $edad;
-        protected $telefono;
-        protected $email;
-        private $carrera;
-        private $fecha_alta;
-        private $fecha_modificacion;
+        protected $fullName;
+        private $age;
+        protected $contact_phone;
+        protected $contact_email;
+        protected $adress;
         private $activo;
+        private $date_creation;
+        private $date_modification;
+        protected $coments_expell;
+        private $coments_motives;
 
         //Metodos
-        public function registrarUsuarios(){
+        public function registrarAlumno(){
             $conexion = conectar();
             $terminar_conexion = cerrar_conexion($conexion);
         }
 
-        public function obtenerUsuarios(){
+        public function obtenerAlumnosos(){
             $conexion = conectar();
             $terminar_conexion = cerrar_conexion($conexion);
         }
@@ -55,7 +45,5 @@
             $conexion = conectar();
             $terminar_conexion = cerrar_conexion($conexion);
         }
-
     }
-
 ?>
