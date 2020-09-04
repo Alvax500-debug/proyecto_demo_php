@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+    <title>Tabla dinamica</title>
+    <script type="text/javascript" src="objetoAjax.js"></script>
+    <script type="text/javascript" src="ejemplo_ajax.js"></script>
+	<style>
+		table, th, td {
+		    border: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="genera_tabla()">
+	<table>
+		<thead>
+			<tr>
+				<th>Título</th>
+				<th>Año</th>
+				<th>Género</th>
+				<th>Editar</th>
+				<th>Eliminar</th>
+			</tr>
+		</thead>
+		<tbody id="tabla_ajax">
+			<!-- Notar que siempre se repite lo que hay entre <tr> y </tr> -->
+			<!-- Así que lo hacemos en un ciclo foreach -->
+
+			
+
+		</tbody>
+		</table>
+		<dialog id="demoDialog">
+			<form method="dialog">
+					<input name="action" type="hidden" value="modificar">
+					<label for="titulo2">Título</label>
+					<input type="text" id="titulo2" name="titulo" required >
+					<br>
+					<br>
+					<label for="anio2">Año</label>
+					<input type="number" id="anio2" name="anio" required >
+					<br>
+					<br>
+					<label for="genero2">Género</label>
+					<input type="text" id="genero2" name="genero" required >
+					
+					<menu>
+						<button id="cancel" type="reset">Cancelar</button>
+						<button id="actualizar" type="submit">Guardar</button>
+					</menu>
+			</form>
+		</dialog>
+    <br>
+    <br>
+    <form action="formulario_videojuego.html">
+		<br><br>
+		<button type="submit">Agregar nuevo juego</button>
+	</form>
+</body>
+</html>

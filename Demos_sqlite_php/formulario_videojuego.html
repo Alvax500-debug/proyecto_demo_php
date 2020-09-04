@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Registrar un nuevo videojuego</title>
+</head>
+<body>
+	<form action="procesar_datos.php" method="post">
+		<!-- Este elemento indica la funcion a utilizar, pues con ella haremos el insert -->
+		<input name="action" type="hidden" value="insertar">
+		<label for="titulo">Título</label>
+		<input type="text" id="titulo" name="titulo" required placeholder="El título del videojuego">
+		<br>
+		<br>
+		<label for="anio">Año</label>
+		<input type="number" id="anio" name="anio" required placeholder="Escribe el año del videojuego">
+		<br>
+		<br>
+		<label for="genero">Género</label>
+		<input type="text" id="genero" name="genero" required placeholder="Escribe el género del videojuego">
+		<br><br>
+		<button type="submit">Guardar</button>
+	</form>
+	<br>
+	<br>
+	<a href="tabla_dinamica.php">Ver todos los videojuegos</a>
+</body>
+</html>

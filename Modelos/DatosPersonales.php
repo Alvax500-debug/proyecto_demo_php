@@ -22,7 +22,7 @@
             $terminar_conexion = cerrar_conexion($conexion);
         }
 
-        public function obtenerAlumnosos(){
+        public function obtenerAlumnos(){
             $conexion = conectar();
             $terminar_conexion = cerrar_conexion($conexion);
         }

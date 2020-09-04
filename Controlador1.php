@@ -77,6 +77,7 @@
 <html>
     <head>
         <title>Resultado de Pruebas</title>
+        <script src="link_dialog.js"></script>
     </head>
     <body>
     <?php
@@ -99,6 +100,7 @@
                 
             echo "</tr>";
             ?>
+            
             <?php
                 $colores = array("red", "green", "orange");
                 $j = 0;
@@ -118,7 +120,7 @@
                         else{
                             $j = 2;
                         }
-                        echo "<td colspan=$cool bgcolor=$colores[$j]><a href=>".$dato["estatus"]."</a></td>";
+                        echo "<td colspan=$cool bgcolor=$colores[$j]><a href="."#dialog"." id=Button1".">".$dato["estatus"]."</a></td>";
                         $j++;
                     echo "</tr>";
                 }
@@ -135,5 +137,23 @@
                 }*/
             ?>
         </table>
+        <dialog id="demoDialog">
+                <form method="dialog">
+                    <section>
+                        <p>Demo del cuadro de dialogo</p>
+                        <input type="radio" id="accept" name="request_status" value="Aceptado">
+                        <label for="accept">Aceptado</label><br>
+                        <input type="radio" id="reject" name="request_status" value="Rechazado">
+                        <label for="reject">Rechazado</label><br>
+                        <input type="radio" id="pendant" name="request_status" value="Pendiente">
+                        <label for="pendant">Pendiente</label><br>
+                        <label for="reason">Motivo</label>
+                        <textarea id="reason" name="reason"></textarea>
+                        <br><br>
+                    </section>
+                    <menu></menu>
+                </form>
+        </dialog>
+        <h4>"Los resultados se podran modificar a futuro"</h4>
     </body>
 </html>
